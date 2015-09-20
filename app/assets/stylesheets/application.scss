@@ -1,6 +1,14 @@
+// Boostrap.
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// Fonts.
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic,600,600italic,800,800italic);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+$primary-font: 'Open Sans', sans-serif;
+$code-font: 'Inconsolata', ;
+
+// Colors.
 $theme-color: #D94545;
 
 html {
@@ -13,11 +21,17 @@ body {
   background-color: #eee;
   margin: 0px;
 
-  font-family: "Trebuchet MS", Helvetica, Arial sans-serif;
+  font-family: $primary-font;
   font-size-adjust: none;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
+  font-size: 14px;
+}
+
+.code-snippet {
+  font-family: $code-font;
+  font-size: 16px;
 }
 
 #content-area {
@@ -33,3 +47,4 @@ body {
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
   padding: 20px;
 }
+
