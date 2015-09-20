@@ -1,2 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$theme-color: #D94545;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  margin: 0px;
+
+  font-family: "Trebuchet MS", Helvetica, Arial sans-serif;
+  font-size-adjust: none;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+}
+
+#content-area {
+  width: 60%;
+  height: auto !important;
+  min-width: 700px;
+  min-height: 100%;
+  background-color: #fff;
+  margin: 0px auto;
+  border-top: 2px solid $theme-color;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  padding: 20px;
+}
