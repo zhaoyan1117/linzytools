@@ -63,6 +63,10 @@ header {
   clear: both;
 }
 
+#error-msg {
+  margin-bottom: 15px;
+}
+
 @media (min-width: 768px) {
   #menu, #content-area {
     border-radius: 5px;

@@ -1,3 +1,11 @@
+<% if flash[:error] %>
+  <div id='error-msg' class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+      <%= flash[:error]%>
+  </div>
+<% end %>
+
 <form id='product-info-form' action="<%= newsletter_volusion_new_product_build_path %>" method="POST">
   <div class="form-group">
     <label for="new-arrivals-url">New arrivals link url</label>
@@ -12,7 +20,7 @@
         <br>
         <b>ONE code per line</b>
       </div>
-      <textarea name='product_codes' class='form-control product-info-textarea'><%= @product_codes %></textarea>
+      <textarea name='product_codes' class='form-control product-info-textarea'><%= @raw_product_codes %></textarea>
     </div>
     <div id='product-names'>
       <div class='product-info-title'>
@@ -20,7 +28,7 @@
         <br>
         <b>ONE name per line</b>
       </div>
-      <textarea name='product_names' class='form-control product-info-textarea'><%= @product_names %></textarea>
+      <textarea name='product_names' class='form-control product-info-textarea'><%= @raw_product_names %></textarea>
     </div>
   </div>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>

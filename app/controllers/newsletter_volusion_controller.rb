@@ -1,6 +1,12 @@
 class NewsletterVolusionController < ApplicationController
   def new_product
     load_cookies
+
+    if flash[:error]
+      @raw_product_codes = flash[:raw_product_codes]
+      @raw_product_names = flash[:raw_product_names]
+      @new_arrivals_url = flash[:new_arrivals_url]
+    end
   end
 
   # Refactor
@@ -15,6 +21,10 @@ class NewsletterVolusionController < ApplicationController
     @product_names = @raw_product_names.split(/\r?\n/).map { |name| name.strip }
 
     unless @product_codes.size == @product_names.size
+      flash[:error] = "Product names and product code have same number of lines."
+      flash[:raw_product_codes] = @raw_product_codes
+      flash[:raw_product_names] = @raw_product_names
+      flash[:new_arrivals_url] = @new_arrivals_url
       redirect_to :back
     end
 
