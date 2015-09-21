@@ -1,3 +1,5 @@
+$code-font: 'Inconsolata', ;
+
 #product-info-form {
   padding: 10px;
 }
@@ -36,4 +38,15 @@
 
 #submit-btn {
   width: 100%;
+}
+
+#result-title {
+  margin-bottom: 10px;
+}
+
+#result-body {
+  font-family: $code-font;
+  padding: 10px;
+  background: #ddd;
+  border-radius: 4px;
 }
