@@ -15,20 +15,16 @@
   </div>
   <div class='form-group' id='product-info-container'>
     <div id='product-codes'>
-      <div class='product-info-title'>
-        Enter <i>product codes</i> here.
-        <br>
-        <b>ONE code per line</b>
-      </div>
-      <textarea name='product_codes' class='form-control product-info-textarea'><%= @raw_product_codes %></textarea>
+      <label for="product-codes-ta">
+        Product codes<br>ONE code per line
+      </label>
+      <textarea id="product-codes-ta" name='product_codes' class='form-control product-info-textarea'><%= @raw_product_codes %></textarea>
     </div>
     <div id='product-names'>
-      <div class='product-info-title'>
-        Enter <i>product names</i> here.
-        <br>
-        <b>ONE name per line</b>
-      </div>
-      <textarea name='product_names' class='form-control product-info-textarea'><%= @raw_product_names %></textarea>
+      <label for='product-names-ta'>
+        Product names<br>ONE name per line
+      </label>
+      <textarea id='product-names-ta' name='product_names' class='form-control product-info-textarea'><%= @raw_product_names %></textarea>
     </div>
   </div>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
