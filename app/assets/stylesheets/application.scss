@@ -57,6 +57,12 @@ header {
   padding: 20px;
 }
 
+#content-area:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 @media (min-width: 768px) {
   #menu, #content-area {
     border-radius: 5px;
