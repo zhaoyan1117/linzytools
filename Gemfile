@@ -10,8 +10,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
-gem 'rails_12factor'
-
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
@@ -23,5 +21,6 @@ group :development do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
