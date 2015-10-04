@@ -5,12 +5,8 @@ class NewsletterRenderer
     @template = ERB.new(File.open(NEWSLETTER_TEMPLATE_DIR.join("#{template}.html.erb")).read)
   end
 
-  # FIX
-  def render(new_arrivals_url, product_codes, product_names)
-    @new_arrivals_url = new_arrivals_url
-    @product_codes = product_codes
-    @product_names = product_names
-
+  def render(params)
+    @params = params
     @template.result binding
   end
 end
