@@ -29,7 +29,9 @@ class NewsletterVolusionController < ApplicationController
     end
 
     @newsletter = NewsletterRenderer.new('new_products_volution')
-                                    .render @new_arrivals_url, @product_codes, @product_names
+                                    .render new_arrivals_url: @new_arrivals_url,
+                                            product_codes: @product_codes,
+                                            product_names: @product_names
   end
 
   private
