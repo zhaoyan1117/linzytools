@@ -21,10 +21,13 @@
                 <li><a href="<%= newsletter_volusion_new_product_path %>">New products</a></li>
               </ul>
             </li>
-            <li class="disabled <%= 'active' if controller_name == 'newsletter_mailchimp' %>">
-              <a href="#">
-                Newsletter - Mailchimp
+            <li class="dropdown <%= 'active' if controller_name == 'newsletter_mailchimp' %>">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Newsletter - Mailchimp <span class="caret"></span>
               </a>
+              <ul class="dropdown-menu">
+                <li><a href="<%= newsletter_mailchimp_new_product_path %>">New products</a></li>
+              </ul>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
