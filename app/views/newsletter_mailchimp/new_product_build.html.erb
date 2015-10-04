@@ -19,6 +19,14 @@
   </div>
   <%= image_tag("mc_inst3.png") %>
 </div>
+
+<button type="button"
+        id="result-copy-btn"
+        class="btn btn-success btn-lg btn-block"
+        data-clipboard-target="#result-body">
+  Click here to copy generated code
+</button>
+
 <div id='result-body'>
   <%= @newsletter %>
 </div>
