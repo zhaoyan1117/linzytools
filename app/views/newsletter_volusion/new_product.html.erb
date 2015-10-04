@@ -1,8 +1,12 @@
+<div id="service-logo">
+  <%= image_tag("volusion_logo.png") %>
+</div>
+
 <% if flash[:error] %>
   <div id='error-msg' class="alert alert-danger" role="alert">
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     <span class="sr-only">Error:</span>
-      <%= flash[:error]%>
+      <%= flash[:error] %>
   </div>
 <% end %>
 

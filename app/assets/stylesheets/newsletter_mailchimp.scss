@@ -1,5 +1,13 @@
 $code-font: 'Inconsolata', ;
 
+#service-logo {
+  img {
+    width: 30%;
+  }
+
+  margin-bottom: 20px;
+}
+
 #product-info-container:after {
   content: "";
   display: table;
